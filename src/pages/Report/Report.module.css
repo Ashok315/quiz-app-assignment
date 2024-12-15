@@ -1,0 +1,62 @@
+.reportBox{
+    margin-top:7rem;
+    padding: 2.5rem 1.5rem 2.2rem 1.5rem;
+    width:850px;
+    max-width:100%;
+    border-radius:2rem 2rem 0 0;
+    height:auto;
+    background-color: white;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap:2rem;
+    height: fit-content;
+    min-height: 80.5vh;
+}
+
+.reportScoreBar{
+    height: 125px;
+    width:125px;
+    border-radius:50%;
+    border:solid 5px #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.reportScoreBar p{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.reportStatus{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 16px;
+    gap:1rem;
+    padding:0.5rem 0;
+    width:350px;
+    max-width:100%;
+}
+.reportStatus div {
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+    padding: 16px;
+    background-color: #F3F4FA;
+    border-radius: 0.5rem;
+}
+
+.reportStatus .correct{
+    background-color:#44b77c5e;
+}
+.reportStatus .incorrect{
+    background-color:#ff3b3e42;
+}
+
+
+
+
+

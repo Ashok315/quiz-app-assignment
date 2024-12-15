@@ -1,0 +1,74 @@
+.questionBox{
+    margin-top:7rem;
+    padding: 5rem 1.5rem 2.2rem 1.5rem;
+    /* max-width:850px; */
+    width:850px;
+    max-width:100%;
+    border-radius:2rem 2rem 0 0;
+    height:auto;
+    background-color: white;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap:2rem;
+    height: fit-content;
+    min-height: 80.5vh;
+}
+
+.progressBar{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:50%;
+    padding:0.5rem;
+    background-color: white;
+}
+
+.progressRing{
+     height: 110px;
+     width:110px;
+     border-radius:50%;
+     border:solid 5px #eee;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+.progressRing p{
+     font-size: 34px;
+     font-weight: bold;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 16px;
+    gap:1rem;
+    padding:0.5rem 0
+}
+.options div {
+    box-sizing: border-box; /* Ensures padding and borders are included in width */
+    padding: 16px;
+    background-color: #F3F4FA;
+    border: 2px solid #f0f0f0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.options div:hover {
+    background-color: #f0f0f0;
+    transition: 0.5s ease all;
+  }
+  
+  .options .selected {
+    background-color: white;
+    border-color:#44B77B
+  }
+  .options .selected:hover{
+    background-color:white;
+  }

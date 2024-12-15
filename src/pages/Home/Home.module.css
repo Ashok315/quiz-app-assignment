@@ -1,0 +1,34 @@
+.homeContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content:space-between;
+  align-items: center;
+  height:100vh;
+  padding: 30px;
+  background: linear-gradient(180deg, rgba(175, 156, 243, 0) 7.92%, #AF9CF3 86.48%);
+  background-blend-mode: multiply;
+}
+
+.homeContainer img{
+     width: 150px;
+     height: 70px;
+     max-width: 100%;
+}
+
+.quizHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius:50%;
+    width: 162px;
+    height: 162px;
+    filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.1));
+}
+.quizHeading p{
+    color:#FF3B3C;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
