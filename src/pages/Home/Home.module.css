@@ -6,7 +6,7 @@
   align-items: center;
   height:100vh;
   padding: 30px;
-  background: linear-gradient(180deg, rgba(175, 156, 243, 0) 7.92%, #AF9CF3 86.48%);
+  background: linear-gradient(180deg, rgba(175, 156, 243, 0) 7.92%, var(--secondary-color) 86.48%);
   background-blend-mode: multiply;
 }
 
@@ -27,8 +27,12 @@
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.1));
 }
 .quizHeading p{
-    color:#FF3B3C;
+    color:var(--primary-color);
     text-align: center;
     font-size: 32px;
     font-weight: bold;
+}
+
+.homeContainer .startBtn{
+    font-size: 17px;
 }

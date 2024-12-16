@@ -1,7 +1,6 @@
 .questionBox{
     margin-top:7rem;
     padding: 5rem 1.5rem 2.2rem 1.5rem;
-    /* max-width:850px; */
     width:850px;
     max-width:100%;
     border-radius:2rem 2rem 0 0;
@@ -15,6 +14,12 @@
     gap:2rem;
     height: fit-content;
     min-height: 80.5vh;
+}
+
+.questionBox img{
+  width: 400px;
+  max-width: 100%;
+  height: auto;
 }
 
 .progressBar{
@@ -31,7 +36,7 @@
      height: 110px;
      width:110px;
      border-radius:50%;
-     border:solid 5px #eee;
+     border:solid 6px var(--off-white);
      display: flex;
      justify-content: center;
      align-items: center;
@@ -42,33 +47,97 @@
      font-size: 34px;
      font-weight: bold;
 }
+.progressRing p>span{
+  color:var(--gray-color);
+  font-size: 18px;
+}
 
 .options{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     font-size: 16px;
     gap:1rem;
-    padding:0.5rem 0
+    padding:0.5rem 0;
+    width:500px;
+    max-width: 100%;
 }
 .options div {
-    box-sizing: border-box; /* Ensures padding and borders are included in width */
+    box-sizing: border-box; 
     padding: 16px;
-    background-color: #F3F4FA;
-    border: 2px solid #f0f0f0;
+    background-color: var(--off-white);
+    border: 2px solid var(--off-white);
     cursor: pointer;
     border-radius: 0.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap:0.5rem;
+    
 }
-
-.options div:hover {
-    background-color: #f0f0f0;
-    transition: 0.5s ease all;
-  }
   
   .options .selected {
     background-color: white;
-    border-color:#44B77B
+    border-color:var(--green-color)
   }
-  .options .selected:hover{
-    background-color:white;
+
+  .questionBox .nextBtn{
+    font-size: 14px;
+    position: relative;
+    
   }
+  .questionBox .nextBtn span{
+     position:absolute;
+     top:50%;
+     right:1rem;
+     transform: translate(-50%,-50%);
+     font-size: 18px;
+   
+  }
+
+  /* Style the container for the option */
+.option {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Style for the selected option */
+.selectedOption {
+  border-color: green;
+  background-color: #f0fff0; /* Light green background */
+}
+
+/* Hide the default input appearance */
+.optionInput {
+  display: none;
+}
+
+/* Style the custom radio or checkbox */
+.optionLabel::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  margin-top: 5px;
+  border-radius: 50%; 
+  background-color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the check mark or active state */
+.optionInput:checked + .optionLabel::before {
+  border-color: var(--green-color);
+  background-color:var(--green-color);
+  content: '✔'; /* Add check mark */
+  color: white;
+  font-size: 8px;
+  text-align: center;
+  line-height: 16px;
+}

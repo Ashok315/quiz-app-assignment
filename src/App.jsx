@@ -3,11 +3,12 @@ import './App.css'
 import Home from './pages/Home/Home'
 import Question from './pages/Question/Question'
 import Report from './pages/Report/Report'
+import { QuizProvider } from './context/QuizContext'
 
 function App() {
 
   return (
-    <>
+    <QuizProvider>
          <Router>
             <Routes>
                 <Route path='/' element={<Home></Home>}></Route>
@@ -15,7 +16,7 @@ function App() {
                 <Route path='/report' element={<Report></Report>}></Route>
             </Routes>
          </Router>
-    </>
+    </QuizProvider>
   )
 }
 

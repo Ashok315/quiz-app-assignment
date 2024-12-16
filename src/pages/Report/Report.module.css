@@ -50,10 +50,14 @@
 }
 
 .reportStatus .correct{
-    background-color:#44b77c5e;
+    background-color:#44b77c39;
 }
 .reportStatus .incorrect{
-    background-color:#ff3b3e42;
+    background-color:#ff3b3e28;
+}
+
+.reportBox .resetBtn{
+    font-size:14px;
 }
 
 
