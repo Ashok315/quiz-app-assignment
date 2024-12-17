@@ -1,0 +1,39 @@
+.progressBar{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:50%;
+    padding:0.6rem;
+    background-color: white;
+    
+}
+ 
+.progressInner {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.progressInner::before {
+  content: "";
+  width: 95px;
+  height: 95px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.progressText{
+  font-size: 34px;
+  font-weight: bold;
+  z-index: 20;
+}
+.progressText span{
+  color:var(--gray-color);
+  font-size: 18px;
+}

@@ -1,6 +1,5 @@
 /* questions box */
 .questionBox{
-    margin-top:7rem;
     padding: 5rem 1.5rem 2.2rem 1.5rem;
     width:850px;
     max-width:100%;
@@ -14,44 +13,16 @@
     align-items: center;
     gap:2rem;
     height: fit-content;
-    min-height: 80.5vh;
+    min-height: calc(100vh - 7rem);
+    margin-bottom: auto; 
+     
+
 }
 
 .questionBox img{
   width: 400px;
   max-width: 100%;
   height: auto;
-}
-
-/* questions progress bar */
-.progressBar{
-    position:absolute;
-    top:0;
-    left:50%;
-    transform: translate(-50%,-50%);
-    border-radius:50%;
-    padding:0.5rem;
-    background-color: white;
-}
-
-.progressRing{
-     height: 110px;
-     width:110px;
-     border-radius:50%;
-     border:solid 6px var(--off-white);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-}
-
-
-.progressRing p{
-     font-size: 34px;
-     font-weight: bold;
-}
-.progressRing p>span{
-  color:var(--gray-color);
-  font-size: 18px;
 }
 
 /* question options */
@@ -102,7 +73,7 @@
      
   }
 
-
+  /* Style the container for the option */
 .option {
   display: flex;
   align-items: center;
@@ -149,4 +120,35 @@
   color: white;
   font-size: 12px;
   text-align: center;
+}
+
+
+.container{
+  display: flex;
+  width: 420px;
+  padding: 50px 0;
+  border-radius: 8px;
+  background: #b55050;
+  row-gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circularProgress{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circularProgress::before{
+    content: "";
+    position: absolute;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: #423030;
 }

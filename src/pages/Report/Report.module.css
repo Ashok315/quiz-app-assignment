@@ -1,6 +1,5 @@
 /* report container */
 .reportBox{
-    margin-top:7rem;
     padding: 2.5rem 1.5rem 2.2rem 1.5rem;
     width:850px;
     max-width:100%;
@@ -14,7 +13,8 @@
     align-items: center;
     gap:2rem;
     height: fit-content;
-    min-height: 80.5vh;
+    min-height: calc(100vh - 7rem);
+    margin-top: auto;
 }
 
 /* score bar */

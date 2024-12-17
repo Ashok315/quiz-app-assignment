@@ -4,6 +4,8 @@ import styles from './Question.module.css';
 import Button from '../../components/Button/Button';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import { useQuizContext } from '../../context/QuizContext';
+import ProgressBar from '../../components/Progressbar/Progressbar.';
+
 
 const Question = () => {
   const navigate = useNavigate();
@@ -59,6 +61,19 @@ const Question = () => {
     }
   };
 
+
+
+  const progressPercentage = (currentQuestionIndex / questions.length) * 100;
+
+  let progressRingClass = styles.progressBarRing;
+  if (progressPercentage < 33) {
+    progressRingClass += ` ${styles.low}`;
+  } else if (progressPercentage < 66) {
+    progressRingClass += ` ${styles.medium}`;
+  } else {
+    progressRingClass += ` ${styles.high}`;
+  }
+
   return (
     <Wrapper>
       <div className={styles.questionBox}>
@@ -90,14 +105,12 @@ const Question = () => {
           ))}
         </div>
 
-        {/*progress-bar of questions  */}
-        <div className={styles.progressBar}>
-          <div className={styles.progressRing}>
-            <p>
-              {currentQuestionIndex + 1}/<span>{questions.length}</span>
-            </p>
-          </div>
-        </div>
+        {/* progress-bar */}
+        <ProgressBar cuurentStage={currentQuestionIndex+1}
+                    totalStage={questions.length }
+                    percentage={currentQuestionIndex&&((currentQuestionIndex + 1)/questions.length)*100}
+        />
+
 
         <Button onClick={handleSubmit} className={styles.nextBtn}>
           Next <span>&#8594;</span>
