@@ -4,6 +4,7 @@ import styles from './Report.module.css';
 import Button from '../../components/Button/Button';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import { useNavigate } from 'react-router-dom';
+import ScoreBar from '../../components/ScoreBar';
 
 const Report = () => {
 
@@ -25,20 +26,17 @@ const Report = () => {
             <h1>Your result</h1>
 
             {/* score-bar */}
-            <div className={styles.reportScore}>
-                <div className={styles.reportScoreBar}>
-                    <p>{(score&&score/questions.length)*100}%</p>
-                </div>
-            </div>
-
+            <ScoreBar percentage={(score&&score/questions.length)*100}></ScoreBar>
+      
             {/* report-details */}
             <div className={styles.reportStatus}>
                 <div className={styles.correct}><strong>{correctAnswersCount}</strong> Correct</div>
                 <div className={styles.incorrect}><strong>{incorrectAnswersCount}</strong> Incorrect</div>
             </div>
-
+            
           <Button onClick={handleRestart} className={styles.resetBtn}>Start Again</Button>
         </div>
+        
     </Wrapper>
   )
 }

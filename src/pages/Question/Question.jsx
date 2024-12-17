@@ -108,7 +108,7 @@ const Question = () => {
         {/* progress-bar */}
         <ProgressBar cuurentStage={currentQuestionIndex+1}
                     totalStage={questions.length }
-                    percentage={currentQuestionIndex&&((currentQuestionIndex + 1)/questions.length)*100}
+                    percentage={currentQuestionIndex?((currentQuestionIndex + 1)/questions.length)*100:10}
         />
 
 
