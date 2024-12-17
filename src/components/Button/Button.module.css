@@ -1,0 +1,11 @@
+
+/* button */
+.btn{
+    padding:12px 125px;
+    color:white;
+    background-color:var(--red-color);
+    border:none;
+    border-radius:80px;
+    font-weight: bold;
+
+  }

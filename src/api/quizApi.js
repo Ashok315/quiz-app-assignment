@@ -7,15 +7,41 @@ const api=axios.create({
     baseURL:baseUrl
 });
 
-const quizAPI = {
+// this is use for the handle globally (e.g. loading, errors)
+export const setupInterceptors=(loading)=>{
+     // Request Interceptor
+    api.interceptors.request.use(
+        (config) => {
+        loading(true); 
+        return config;
+        },
+        (error) => {
+        loading(false); 
+        return Promise.reject(error);
+        }
+    );
 
+    // Response Interceptor
+    api.interceptors.response.use(
+        (response) => {
+        loading(false); 
+        return response;
+        },
+        (error) => {
+        loading(false); 
+        return Promise.reject(error);
+        }
+    );
+}
+
+
+const quizAPI = {
   fetchQuestionsAPI: async () => {
     try {
       const response = await api.get(`/questions`);
       return response.data;
     } catch (error) {
-      console.error('Error fetching questions', error);
-      throw error;
+      throw new Error(error.message);
     }
   },
 
@@ -29,8 +55,7 @@ const quizAPI = {
       });
       return response.data;
     } catch (error) {
-      console.error('Error submitting answer', error);
-      throw error;
+        throw new Error(error.message);
     }
   },
 

@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./Home.module.css"
-import Button from "../../components/Button";
-// import { useQuiz } from "../../context/QuizContext";
-// import quizAPI from "../../api/quizApi";
+import Button from "../../components/Button/Button";
 import { useQuizContext } from "../../context/QuizContext";
 import quizAPI from "../../api/quizApi";
 import { useNavigate } from "react-router-dom";
@@ -11,13 +9,14 @@ const Home = () =>{
     const { startQuiz } = useQuizContext();
     const navigate = useNavigate();
 
+    // handle start button
     const handleStart = async () => {
       try {
         const questions= await quizAPI.fetchQuestionsAPI();
         startQuiz(questions);
         navigate('/question');
       } catch (error) {
-        console.error('Error starting quiz:', error);
+        throw new Error(error.message);
       }
     };
 

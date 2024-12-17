@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from "./Button.module.css"
 
 const Button=({
   children,
@@ -7,7 +8,7 @@ const Button=({
   ...props
 })=>{
   return (
-    <button type={type} className={`btn ${className}`} {...props}>
+    <button type={type} className={`${styles.btn} ${className}`} {...props}>
        {children}
     </button>
   );

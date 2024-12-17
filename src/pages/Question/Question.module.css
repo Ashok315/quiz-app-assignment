@@ -1,3 +1,4 @@
+/* questions box */
 .questionBox{
     margin-top:7rem;
     padding: 5rem 1.5rem 2.2rem 1.5rem;
@@ -22,6 +23,7 @@
   height: auto;
 }
 
+/* questions progress bar */
 .progressBar{
     position:absolute;
     top:0;
@@ -52,10 +54,11 @@
   font-size: 18px;
 }
 
+/* question options */
 .options{
     display: flex;
     flex-direction: column;
-    font-size: 16px;
+    font-size: 15.5px;
     gap:1rem;
     padding:0.5rem 0;
     width:500px;
@@ -63,21 +66,26 @@
 }
 .options div {
     box-sizing: border-box; 
-    padding: 16px;
+    padding: 18px;
     background-color: var(--off-white);
     border: 2px solid var(--off-white);
     cursor: pointer;
     border-radius: 0.5rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
     gap:0.5rem;
+    position:relative
     
 }
   
   .options .selected {
     background-color: white;
     border-color:var(--green-color)
+  }
+
+  .options div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
   }
 
   .questionBox .nextBtn{
@@ -87,14 +95,14 @@
   }
   .questionBox .nextBtn span{
      position:absolute;
-     top:50%;
+     top:47%;
      right:1rem;
      transform: translate(-50%,-50%);
      font-size: 18px;
-   
+     
   }
 
-  /* Style the container for the option */
+
 .option {
   display: flex;
   align-items: center;
@@ -106,38 +114,39 @@
   transition: all 0.3s ease;
 }
 
-/* Style for the selected option */
-.selectedOption {
-  border-color: green;
-  background-color: #f0fff0; /* Light green background */
-}
 
 /* Hide the default input appearance */
 .optionInput {
   display: none;
 }
 
-/* Style the custom radio or checkbox */
+.optionLabel{
+  margin-left: 2.1rem;
+}
+
+
+/* Custom radio or checkbox */
 .optionLabel::before {
   content: '';
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-  margin-top: 5px;
+  position: absolute;
+  top:31%;
+  width: 17px;
+  height: 17px;
   border-radius: 50%; 
-  background-color: white;
-  transition: all 0.3s ease;
+  border:solid 2px #d8d8d8;
+  transition: 0.1s ease-in-out;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  margin-left: -2rem;
 }
+
 
 /* Style the check mark or active state */
 .optionInput:checked + .optionLabel::before {
   border-color: var(--green-color);
   background-color:var(--green-color);
-  content: '✔'; /* Add check mark */
+  content: '✔'; 
   color: white;
-  font-size: 8px;
+  font-size: 12px;
   text-align: center;
-  line-height: 16px;
 }

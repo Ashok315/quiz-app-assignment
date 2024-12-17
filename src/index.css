@@ -16,25 +16,3 @@
   --light-red:#ff3b3e28;
 }
 
-/* wrapper */
-.wrapper{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color:var(--secondary-color);
-  background-image: url('/bg-image.svg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position:100% -10px;
-  min-height: 100vh;
-}
-
-/* button */
-.btn{
-  padding:12px 125px;
-  color:white;
-  background-color:var(--red-color);
-  border:none;
-  border-radius:80px;
-  font-weight: bold;
-}

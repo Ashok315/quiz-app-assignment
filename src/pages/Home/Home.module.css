@@ -4,7 +4,8 @@
   gap: 2rem;
   justify-content:space-between;
   align-items: center;
-  height:100vh;
+  height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
   padding: 30px;
   background: linear-gradient(180deg, rgba(175, 156, 243, 0) 7.92%, var(--secondary-color) 86.48%);
   background-blend-mode: multiply;

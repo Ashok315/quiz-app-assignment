@@ -1,8 +1,8 @@
 import React from 'react';
 import { useQuizContext } from '../../context/QuizContext';
 import styles from './Report.module.css';
-import Button from '../../components/Button';
-import Wrapper from '../../components/Wrapper';
+import Button from '../../components/Button/Button';
+import Wrapper from '../../components/Wrapper/Wrapper';
 import { useNavigate } from 'react-router-dom';
 
 const Report = () => {
