@@ -27,13 +27,16 @@
     height: 162px;
     filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.1));
 }
-.quizHeading p{
+.quizHeading h1{
     color:var(--primary-color);
     text-align: center;
     font-size: 32px;
     font-weight: bold;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
 }
 
 .homeContainer .startBtn{
     font-size: 17px;
+    font-weight: 700;
 }

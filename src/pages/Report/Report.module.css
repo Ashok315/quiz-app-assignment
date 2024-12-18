@@ -17,6 +17,11 @@
     margin-top: auto;
 }
 
+.reportBox h1{
+    font-size:26px;
+    font-weight: 800;
+}
+
 /* score bar */
 .reportScoreBar{
     height: 125px;
@@ -29,30 +34,32 @@
 }
 
 
-.reportScoreBar p{
-    font-size: 36px;
-    font-weight: bold;
-}
-
 .reportStatus{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 16px;
+    font-size: 14px;
     gap:1rem;
     padding:0.5rem 0;
     width:350px;
     max-width:100%;
+    font-weight: 600;
 }
 .reportStatus div {
     box-sizing: border-box;
     padding: 16px;
-    background-color: #F3F4FA;
     border-radius: 0.5rem;
+    color:rgb(88, 87, 87);
+    font-weight: 600;
+}
+.reportStatus div strong{
+    font-weight: 800;
+    color:black
 }
 
 .reportStatus .correct{
     background-color:#44b77c39;
+  
 }
 .reportStatus .incorrect{
     background-color:#ff3b3e28;

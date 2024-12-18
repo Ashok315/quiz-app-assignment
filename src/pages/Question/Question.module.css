@@ -18,6 +18,10 @@
      
 
 }
+.questionText{
+  font-size: 17px;
+  font-weight: 800;
+}
 
 .questionBox img{
   width: 400px;
@@ -93,6 +97,7 @@
 
 .optionLabel{
   margin-left: 2.1rem;
+  font-size: 14px;
 }
 
 
@@ -102,8 +107,8 @@
   display: inline-block;
   position: absolute;
   top:31%;
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%; 
   border:solid 2px #d8d8d8;
   transition: 0.1s ease-in-out;
@@ -122,33 +127,3 @@
   text-align: center;
 }
 
-
-.container{
-  display: flex;
-  width: 420px;
-  padding: 50px 0;
-  border-radius: 8px;
-  background: #b55050;
-  row-gap: 30px;
-  flex-direction: column;
-  align-items: center;
-}
-
-.circularProgress{
-    position: relative;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.circularProgress::before{
-    content: "";
-    position: absolute;
-    height: 210px;
-    width: 210px;
-    border-radius: 50%;
-    background-color: #423030;
-}

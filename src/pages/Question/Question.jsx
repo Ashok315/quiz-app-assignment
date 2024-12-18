@@ -5,9 +5,11 @@ import Button from '../../components/Button/Button';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import { useQuizContext } from '../../context/QuizContext';
 import ProgressBar from '../../components/Progressbar/Progressbar.';
+import quizAPI from '../../api/quizApi';
 
 
 const Question = () => {
+  const { startQuiz } = useQuizContext();
   const navigate = useNavigate();
   const [startTime, setStartTime] = useState(null); 
 
@@ -20,10 +22,21 @@ const Question = () => {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  useEffect(()=>{
+      quizAPI.fetchQuestionsAPI().then((questions)=>{
+        if(questions){
+            startQuiz(questions);
+        }
+      })
+
+  },[])
+
   useEffect(() => {
    // Start the timer for current question
     setStartTime(Date.now()); 
   }, [currentQuestionIndex]);
+
+ 
 
 
   // handle change option
@@ -78,7 +91,7 @@ const Question = () => {
     <Wrapper>
       <div className={styles.questionBox}>
         {/* question */}
-        <h3>{currentQuestion?.text}</h3>
+        <p className={styles.questionText}>{currentQuestion?.text}</p>
 
         {/*question image  */}
         {currentQuestion?.image && (

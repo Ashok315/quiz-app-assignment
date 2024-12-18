@@ -4,6 +4,10 @@
   box-sizing:border-box;
 } 
 
+body{
+  font-family: "Nunito",sans-serif;
+}
+
 /* colors */
 :root {
   --primary-color: #FF3B3C;

@@ -29,11 +29,12 @@
 }
 
 .progressText{
-  font-size: 34px;
-  font-weight: bold;
+  font-size: 32px;
+  font-weight: 800;
   z-index: 20;
+  font-style: italic;
 }
 .progressText span{
   color:var(--gray-color);
-  font-size: 18px;
+  font-size: 16px;
 }

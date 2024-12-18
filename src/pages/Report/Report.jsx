@@ -4,7 +4,7 @@ import styles from './Report.module.css';
 import Button from '../../components/Button/Button';
 import Wrapper from '../../components/Wrapper/Wrapper';
 import { useNavigate } from 'react-router-dom';
-import ScoreBar from '../../components/ScoreBar';
+import ScoreBar from '../../components/ScoreBar/ScoreBar';
 
 const Report = () => {
 
@@ -17,7 +17,7 @@ const Report = () => {
 
   const handleRestart = () => {
     resetQuiz(); 
-    navigate('/');
+    navigate('/question');
   };
 
   return (

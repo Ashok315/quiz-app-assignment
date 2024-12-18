@@ -14,7 +14,7 @@ const ProgressBar = ({cuurentStage, totalStage, percentage}) => {
     >
     
         <div className={styles.progressText}>
-             {cuurentStage}/<span>{totalStage}</span>
+             {cuurentStage}<span>/{totalStage}</span>
         </div>
     </div>
    
