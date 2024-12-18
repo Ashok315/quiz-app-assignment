@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 // Mock API URL
-const baseUrl=import.meta.env.VITE_API_BASE_URL;
+// const baseUrl=import.meta.env.VITE_API_BASE_URL;
 
 const api=axios.create({
-    baseURL:baseUrl
+    baseURL:"https://5o89y.wiremockapi.cloud/"
 });
 
 // this is use for the handle globally (e.g. loading, errors)
