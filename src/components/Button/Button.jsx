@@ -11,7 +11,7 @@ const Button=({
     <button type={type} className={`${styles.btn} ${className}`} {...props}>
        {children}
     </button>
-  );
+  )
 }
 
 export default Button;
